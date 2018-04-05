@@ -1,8 +1,89 @@
+html {
+	font-family: Roboto;
+}
+
+body {
+	/*https://uigradients.com/#Ash*/
+	background: #606c88;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
 #app {
 	width: 360px;
-	margin: 0 auto;
-	border: 2px solid gray;
+	margin: 100px auto;
+	background-color: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
+
+h1 {
+	background-color: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#plus-sign {
+	float: right;
+}
+
+input {
+	font-size: 18px;
+	background-color: #f7f7f7;
+	width: 100%;        /* only content  without changing bod-sizing */
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	color: #2980b9;
+	border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus {
+	outline: none;
+	border: 3px solid  #2980b9;
+	background-color: white;
+}
+
+ul {
+	list-style: none;  /* get rid of bullet point */
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	background-color: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+/* every 2nd child */
+li:nth-child(2n){
+	background-color: #f7f7f7;
+}
+
+
+.trash-can {
+	background-color: #e74c4c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;   /* icon color */
+	width: 0;
+	opacity: 0;
+	display: inline-block;
+	transition: 0.2s linear;     /* take 0.2s to change property of the style */
+}
+
+/*when hover li change width of span*/
+li:hover .trash-can {
+	width: 40px;
+	opacity: 1.0;
+}
+
 .completed {
 	color: gray;
 	text-decoration: line-through;
