@@ -28,7 +28,7 @@ $("input[type='text']").keypress(function(event){
 	// if enter is pressed, assuming typing is done
 	if(event.which === 13){
 		var li = document.createElement("li");
-		li.innerHTML = `<span><i class="fas fa-trash-alt"></i></span> ${$(this).val()}`;
+		li.innerHTML = `<span class="trash-can"><i class="fas fa-trash-alt"></i></span> ${$(this).val()}`;
 		$("ul").append(li);
 		$(this).val("");         // clear input field
 	}
